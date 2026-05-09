@@ -1,0 +1,743 @@
+{
+  "complexities": {
+    "bajo": "Bajo",
+    "medio": "Medio",
+    "alto": "Alto",
+    "extraAlto": "Extra alto"
+  },
+  "sources": [
+    {
+      "label": "Oracle Field Service Cloud: administracion, capacity, routing e integraciones",
+      "url": "https://docs.oracle.com/en/cloud/saas/field-service/"
+    },
+    {
+      "label": "Oracle Fusion Middleware / SOA Suite / Service Bus: servicios, contratos, adaptadores y despliegue",
+      "url": "https://docs.oracle.com/en/middleware/"
+    },
+    {
+      "label": "Oracle Application Integration Architecture: ABCS, EBO, EBM, DVM, XREF y PIP",
+      "url": "https://docs.oracle.com/cd/E17904_01/doc.1111/e17364/toc.htm"
+    },
+    {
+      "label": "Oracle BRM: pricing, opcodes, storable classes, billing, pipeline y configuracion",
+      "url": "https://docs.oracle.com/en/industries/communications/billing-revenue/"
+    },
+    {
+      "label": "Oracle Siebel CRM: repository, business components, applets, workflows, EAI y scripts",
+      "url": "https://docs.oracle.com/cd/F26413_48/books/ConfigApps/"
+    },
+    {
+      "label": "Oracle Communications UIM: specifications, cartridges, rulesets, web services y extensiones",
+      "url": "https://docs.oracle.com/en/industries/communications/uim/"
+    },
+    {
+      "label": "Oracle Communications OSM: cartridges, orchestration, tasks, order data y automation plug-ins",
+      "url": "https://docs.oracle.com/en/industries/communications/order-service-management/"
+    },
+    {
+      "label": "Oracle Database: PL/SQL, schema objects, performance, scheduler, seguridad y migracion de datos",
+      "url": "https://docs.oracle.com/en/database/oracle/oracle-database/"
+    }
+  ],
+  "systems": [
+    {
+      "name": "OFSC",
+      "description": "Oracle Field Service Cloud",
+      "artifacts": [
+        {
+          "name": "Activity types, propiedades y formularios",
+          "days": {
+            "bajo": 1,
+            "medio": 2,
+            "alto": 4,
+            "extraAlto": 7
+          },
+          "note": "Alta recurrencia en requerimientos de agenda, captura movil y validaciones simples."
+        },
+        {
+          "name": "Work skills y condiciones de habilidad",
+          "days": {
+            "bajo": 1,
+            "medio": 2,
+            "alto": 4,
+            "extraAlto": 6
+          },
+          "note": "Incluye reglas de elegibilidad, niveles y efectos en asignacion."
+        },
+        {
+          "name": "Work zones, capacity categories y quota",
+          "days": {
+            "bajo": 1,
+            "medio": 3,
+            "alto": 5,
+            "extraAlto": 8
+          },
+          "note": "Sube de complejidad cuando toca capacidad por zona, ventanas y calendario operativo."
+        },
+        {
+          "name": "Routing plans y reglas de ruteo",
+          "days": {
+            "bajo": 2,
+            "medio": 4,
+            "alto": 7,
+            "extraAlto": 12
+          },
+          "note": "Normalmente requiere simulacion y comparacion contra rutas reales."
+        },
+        {
+          "name": "Arbol de recursos, calendarios y turnos",
+          "days": {
+            "bajo": 1,
+            "medio": 3,
+            "alto": 5,
+            "extraAlto": 8
+          },
+          "note": "Considera cuadrillas, territorios, disponibilidad y excepciones."
+        },
+        {
+          "name": "Message scenarios e integraciones salientes",
+          "days": {
+            "bajo": 2,
+            "medio": 4,
+            "alto": 8,
+            "extraAlto": 13
+          },
+          "note": "Impacta eventos, payloads, reintentos y monitoreo."
+        },
+        {
+          "name": "API, plug-ins y personalizacion movil",
+          "days": {
+            "bajo": 3,
+            "medio": 6,
+            "alto": 12,
+            "extraAlto": 20
+          },
+          "note": "Mayor incertidumbre por seguridad, versionado y pruebas con dispositivos."
+        },
+        {
+          "name": "Reportes, filtros y dashboards operativos",
+          "days": {
+            "bajo": 1,
+            "medio": 2,
+            "alto": 4,
+            "extraAlto": 7
+          },
+          "note": "El esfuerzo depende de disponibilidad del dato y volumen de filtros."
+        }
+      ]
+    },
+    {
+      "name": "MDW",
+      "description": "Middleware Oracle, OSB, SOA o capa corporativa equivalente",
+      "artifacts": [
+        {
+          "name": "Proxy service y business service",
+          "days": {
+            "bajo": 1,
+            "medio": 4,
+            "alto": 8,
+            "extraAlto": 14
+          },
+          "note": "Cambios de endpoint, transformacion, enrutamiento y politicas de servicio."
+        },
+        {
+          "name": "Contratos WSDL, XSD, REST o OpenAPI",
+          "days": {
+            "bajo": 1,
+            "medio": 3,
+            "alto": 6,
+            "extraAlto": 10
+          },
+          "note": "Incluye versionado de contrato y compatibilidad con consumidores."
+        },
+        {
+          "name": "Mapeos XQuery, XSLT o payload mapping",
+          "days": {
+            "bajo": 2,
+            "medio": 5,
+            "alto": 10,
+            "extraAlto": 16
+          },
+          "note": "Sube con reglas condicionales, catalogos y transformacion canonica."
+        },
+        {
+          "name": "Adaptadores DB, JMS, File, REST o SOAP",
+          "days": {
+            "bajo": 2,
+            "medio": 5,
+            "alto": 9,
+            "extraAlto": 15
+          },
+          "note": "Incluye conectividad, credenciales, pools, colas y manejo transaccional."
+        },
+        {
+          "name": "Composite SOA, BPEL o Mediator",
+          "days": {
+            "bajo": 3,
+            "medio": 7,
+            "alto": 14,
+            "extraAlto": 22
+          },
+          "note": "Procesos con compensacion, asincronia o multiples sistemas requieren mas ciclo."
+        },
+        {
+          "name": "Manejo de errores, retry y auditoria",
+          "days": {
+            "bajo": 2.5,
+            "medio": 4,
+            "alto": 8,
+            "extraAlto": 12
+          },
+          "note": "Considera trazabilidad, colas de error y conciliacion operativa."
+        },
+        {
+          "name": "Seguridad, certificados y credenciales",
+          "days": {
+            "bajo": 1,
+            "medio": 3,
+            "alto": 6,
+            "extraAlto": 10
+          },
+          "note": "El esfuerzo crece con mTLS, OAuth, rotacion y gobierno de ambientes."
+        },
+        {
+          "name": "Scripts de despliegue y configuracion de ambiente",
+          "days": {
+            "bajo": 1,
+            "medio": 2,
+            "alto": 4,
+            "extraAlto": 7
+          },
+          "note": "Incluye planes, properties, WLST, variables y smoke tests."
+        }
+      ]
+    },
+    {
+      "name": "AIA",
+      "description": "Oracle Application Integration Architecture",
+      "artifacts": [
+        {
+          "name": "ABCS requester o provider",
+          "days": {
+            "bajo": 4,
+            "medio": 8,
+            "alto": 16,
+            "extraAlto": 25
+          },
+          "note": "Artefacto central; suele tocar contrato, transformacion, fault policy y composite."
+        },
+        {
+          "name": "EBS, EBO y EBM canonicos",
+          "days": {
+            "bajo": 3,
+            "medio": 7,
+            "alto": 14,
+            "extraAlto": 22
+          },
+          "note": "Impacta modelo canonico, extensiones y compatibilidad de mensajes."
+        },
+        {
+          "name": "Transformaciones XSLT AIA",
+          "days": {
+            "bajo": 2,
+            "medio": 5,
+            "alto": 10,
+            "extraAlto": 18
+          },
+          "note": "Aumenta con normalizacion, estructuras repetitivas y validacion de dominios."
+        },
+        {
+          "name": "DVM y XREF",
+          "days": {
+            "bajo": 1,
+            "medio": 3,
+            "alto": 5,
+            "extraAlto": 8
+          },
+          "note": "Tablas de equivalencia y referencias cruzadas entre aplicaciones."
+        },
+        {
+          "name": "Extension o ajuste de PIP",
+          "days": {
+            "bajo": 5,
+            "medio": 10,
+            "alto": 20,
+            "extraAlto": 35
+          },
+          "note": "Requiere entender flujo preconstruido, puntos de extension y regresion completa."
+        },
+        {
+          "name": "AIA error handling y fault policies",
+          "days": {
+            "bajo": 2,
+            "medio": 5,
+            "alto": 9,
+            "extraAlto": 14
+          },
+          "note": "Incluye notificaciones, recuperacion y trazas operativas."
+        },
+        {
+          "name": "Routing, mediator y composite wires",
+          "days": {
+            "bajo": 2,
+            "medio": 5,
+            "alto": 10,
+            "extraAlto": 16
+          },
+          "note": "La complejidad aumenta con multiples consumidores o reglas por canal."
+        },
+        {
+          "name": "Deployment plan y configuracion AIA",
+          "days": {
+            "bajo": 1,
+            "medio": 3,
+            "alto": 6,
+            "extraAlto": 10
+          },
+          "note": "Propiedades, endpoints, plan de promocion y validacion postdeploy."
+        }
+      ]
+    },
+    {
+      "name": "BRM",
+      "description": "Oracle Communications Billing and Revenue Management",
+      "artifacts": [
+        {
+          "name": "Productos, deals, planes y descuentos",
+          "days": {
+            "bajo": 2,
+            "medio": 5,
+            "alto": 9,
+            "extraAlto": 15
+          },
+          "note": "Pricing y catalogo suelen necesitar pruebas de rating y escenarios comerciales."
+        },
+        {
+          "name": "Custom opcode, policy opcode o FM",
+          "days": {
+            "bajo": 5,
+            "medio": 10,
+            "alto": 20,
+            "extraAlto": 35
+          },
+          "note": "Desarrollo C/C++ o policy logic con pruebas unitarias, memoria y regresion."
+        },
+        {
+          "name": "Storable class y cambios de esquema",
+          "days": {
+            "bajo": 3,
+            "medio": 7,
+            "alto": 14,
+            "extraAlto": 24
+          },
+          "note": "Incluye diccionario, DB, carga historica y compatibilidad con DM."
+        },
+        {
+          "name": "Billing, invoicing y scripts de ciclo",
+          "days": {
+            "bajo": 3,
+            "medio": 7,
+            "alto": 13,
+            "extraAlto": 22
+          },
+          "note": "Impacta ciclo de facturacion, ajustes, impuestos, formatos y conciliacion."
+        },
+        {
+          "name": "Pipeline rating y event mapping",
+          "days": {
+            "bajo": 4,
+            "medio": 9,
+            "alto": 18,
+            "extraAlto": 30
+          },
+          "note": "Sensible a volumen, performance, formatos de eventos y reprocesos."
+        },
+        {
+          "name": "Provisioning e integracion PCM_OP",
+          "days": {
+            "bajo": 4,
+            "medio": 8,
+            "alto": 16,
+            "extraAlto": 28
+          },
+          "note": "Incluye flujos sincronos/asincronos, idempotencia y errores operativos."
+        },
+        {
+          "name": "pin.conf, business params y configuracion",
+          "days": {
+            "bajo": 1,
+            "medio": 3,
+            "alto": 5,
+            "extraAlto": 8
+          },
+          "note": "Parametros de runtime, cache, servicios y comportamiento de componentes."
+        },
+        {
+          "name": "Reportes, extractos y reconciliacion",
+          "days": {
+            "bajo": 2,
+            "medio": 5,
+            "alto": 9,
+            "extraAlto": 16
+          },
+          "note": "Depende de modelo de datos, volumen y reglas financieras."
+        }
+      ]
+    },
+    {
+      "name": "SIEBEL",
+      "description": "Oracle Siebel CRM",
+      "artifacts": [
+        {
+          "name": "Business component y business object",
+          "days": {
+            "bajo": 2,
+            "medio": 5,
+            "alto": 10,
+            "extraAlto": 18
+          },
+          "note": "Campos, joins, links, user properties y reglas de visibilidad."
+        },
+        {
+          "name": "Applet, view, screen y controles UI",
+          "days": {
+            "bajo": 1,
+            "medio": 3,
+            "alto": 6,
+            "extraAlto": 10
+          },
+          "note": "Incluye exposicion de campos, layout, responsabilidades y validacion visual."
+        },
+        {
+          "name": "Workflow process",
+          "days": {
+            "bajo": 3,
+            "medio": 6,
+            "alto": 12,
+            "extraAlto": 20
+          },
+          "note": "El esfuerzo crece con ramas, subprocesos, errores y llamadas a servicios."
+        },
+        {
+          "name": "Business service y eScript",
+          "days": {
+            "bajo": 3,
+            "medio": 7,
+            "alto": 14,
+            "extraAlto": 24
+          },
+          "note": "Logica custom, integraciones, performance y manejo de excepciones."
+        },
+        {
+          "name": "Integration object, data map y EAI",
+          "days": {
+            "bajo": 3,
+            "medio": 7,
+            "alto": 13,
+            "extraAlto": 22
+          },
+          "note": "Mapeos inbound/outbound, transformacion y pruebas con sistemas externos."
+        },
+        {
+          "name": "LOV, picklist y user properties",
+          "days": {
+            "bajo": 1,
+            "medio": 2,
+            "alto": 4,
+            "extraAlto": 7
+          },
+          "note": "Cambios parametrizados, normalmente con bajo impacto si no alteran logica."
+        },
+        {
+          "name": "Runtime events, signals y policies",
+          "days": {
+            "bajo": 2,
+            "medio": 4,
+            "alto": 8,
+            "extraAlto": 13
+          },
+          "note": "Reglas disparadas por eventos de negocio y acciones condicionales."
+        },
+        {
+          "name": "Workspace, delivery y migracion de repository",
+          "days": {
+            "bajo": 1,
+            "medio": 3,
+            "alto": 6,
+            "extraAlto": 9
+          },
+          "note": "Incluye conflicto de objetos, compile, entrega y validacion de ambiente."
+        },
+        {
+          "name": "EIM / Integraciones batch",
+          "note": "EIM / Integraciones batch",
+          "custom": true,
+          "days": {
+            "bajo": 2,
+            "medio": 5,
+            "alto": 8,
+            "extraAlto": 10
+          }
+        }
+      ]
+    },
+    {
+      "name": "UIM",
+      "description": "Oracle Communications Unified Inventory Management",
+      "artifacts": [
+        {
+          "name": "Specifications y modelo de entidades",
+          "days": {
+            "bajo": 3,
+            "medio": 7,
+            "alto": 14,
+            "extraAlto": 22
+          },
+          "note": "Modelado de servicios, recursos, relaciones y datos obligatorios."
+        },
+        {
+          "name": "Cartridge model y metadata",
+          "days": {
+            "bajo": 3,
+            "medio": 6,
+            "alto": 12,
+            "extraAlto": 20
+          },
+          "note": "Empaquetado, versionado y dependencias entre especificaciones."
+        },
+        {
+          "name": "Rulesets, validaciones y extension points",
+          "days": {
+            "bajo": 3,
+            "medio": 7,
+            "alto": 14,
+            "extraAlto": 24
+          },
+          "note": "Logica custom de inventario con pruebas de ciclo de vida."
+        },
+        {
+          "name": "Web services, APIs e integracion",
+          "days": {
+            "bajo": 3,
+            "medio": 7,
+            "alto": 13,
+            "extraAlto": 22
+          },
+          "note": "Incluye contratos, seguridad, transformacion y escenarios de error."
+        },
+        {
+          "name": "Caracteristicas y relaciones",
+          "days": {
+            "bajo": 2,
+            "medio": 4,
+            "alto": 8,
+            "extraAlto": 14
+          },
+          "note": "Cambios de atributos, cardinalidad y dependencia entre recursos."
+        },
+        {
+          "name": "Lifecycle, estados y transiciones",
+          "days": {
+            "bajo": 2,
+            "medio": 5,
+            "alto": 9,
+            "extraAlto": 15
+          },
+          "note": "Reglas de inventario por estado, reserva, asignacion y desconexion."
+        },
+        {
+          "name": "Scripts DB y seed data",
+          "days": {
+            "bajo": 2,
+            "medio": 4,
+            "alto": 8,
+            "extraAlto": 14
+          },
+          "note": "Carga inicial, correcciones y datos maestros del inventario."
+        },
+        {
+          "name": "Pantallas y configuracion UI",
+          "days": {
+            "bajo": 2,
+            "medio": 4,
+            "alto": 8,
+            "extraAlto": 13
+          },
+          "note": "Ajustes de visibilidad, busqueda y captura operacional."
+        }
+      ]
+    },
+    {
+      "name": "OSM",
+      "description": "Oracle Communications Order and Service Management",
+      "artifacts": [
+        {
+          "name": "Order cartridge y process model",
+          "days": {
+            "bajo": 4,
+            "medio": 9,
+            "alto": 18,
+            "extraAlto": 30
+          },
+          "note": "Corazon del flujo de orden; requiere pruebas por escenarios de orquestacion."
+        },
+        {
+          "name": "Tasks, lifecycle y estados de orden",
+          "days": {
+            "bajo": 3,
+            "medio": 7,
+            "alto": 13,
+            "extraAlto": 22
+          },
+          "note": "Incluye tareas manuales/automaticas, transiciones y condiciones."
+        },
+        {
+          "name": "Orchestration plan y dependencias",
+          "days": {
+            "bajo": 4,
+            "medio": 8,
+            "alto": 16,
+            "extraAlto": 28
+          },
+          "note": "Secuencia de fulfillment, dependencias entre servicios y rollback."
+        },
+        {
+          "name": "Automation plug-in, XQuery y XSLT",
+          "days": {
+            "bajo": 3,
+            "medio": 7,
+            "alto": 14,
+            "extraAlto": 24
+          },
+          "note": "Logica de automatizacion, transformacion y comunicacion con sistemas externos."
+        },
+        {
+          "name": "Data dictionary y order template",
+          "days": {
+            "bajo": 2,
+            "medio": 5,
+            "alto": 9,
+            "extraAlto": 15
+          },
+          "note": "Estructura de datos de orden, validaciones y plantillas."
+        },
+        {
+          "name": "Web services, JMS e interfaces",
+          "days": {
+            "bajo": 3,
+            "medio": 7,
+            "alto": 13,
+            "extraAlto": 22
+          },
+          "note": "Entrada/salida de ordenes, eventos, colas y contratos."
+        },
+        {
+          "name": "Fallout, jeopardy y manejo de errores",
+          "days": {
+            "bajo": 2,
+            "medio": 5,
+            "alto": 10,
+            "extraAlto": 16
+          },
+          "note": "Alertas, recuperacion, reintentos y operacion de ordenes fallidas."
+        },
+        {
+          "name": "Build, deploy cartridge y config de ambiente",
+          "days": {
+            "bajo": 1,
+            "medio": 3,
+            "alto": 6,
+            "extraAlto": 10
+          },
+          "note": "Empaquetado, versionado, despliegue y smoke tests."
+        }
+      ]
+    },
+    {
+      "name": "Oracle DB",
+      "description": "Oracle Database",
+      "artifacts": [
+        {
+          "name": "DDL de tablas, indices y constraints",
+          "days": {
+            "bajo": 1,
+            "medio": 3,
+            "alto": 6,
+            "extraAlto": 10
+          },
+          "note": "Incluye impacto en integridad, volumen, locks y rollback."
+        },
+        {
+          "name": "Packages, procedures y functions PL/SQL",
+          "days": {
+            "bajo": 2,
+            "medio": 5,
+            "alto": 10,
+            "extraAlto": 18
+          },
+          "note": "Logica de negocio en BD, pruebas unitarias y errores de datos."
+        },
+        {
+          "name": "Triggers, jobs y scheduler",
+          "days": {
+            "bajo": 2,
+            "medio": 4,
+            "alto": 8,
+            "extraAlto": 14
+          },
+          "note": "Eventos automaticos, concurrencia, ventanas batch y monitoreo."
+        },
+        {
+          "name": "Views y materialized views",
+          "days": {
+            "bajo": 1,
+            "medio": 3,
+            "alto": 6,
+            "extraAlto": 11
+          },
+          "note": "Depende de joins, refresco, permisos y consumo por reportes."
+        },
+        {
+          "name": "Migracion, backfill y scripts de datos",
+          "days": {
+            "bajo": 3,
+            "medio": 7,
+            "alto": 14,
+            "extraAlto": 24
+          },
+          "note": "Sensible a volumen, validacion, ventanas de ejecucion y reversa."
+        },
+        {
+          "name": "Performance tuning y planes de ejecucion",
+          "days": {
+            "bajo": 2,
+            "medio": 6,
+            "alto": 12,
+            "extraAlto": 22
+          },
+          "note": "Analisis de AWR/ASH, indices, SQL rewrite y pruebas con volumen."
+        },
+        {
+          "name": "Grants, roles, synonyms y seguridad",
+          "days": {
+            "bajo": 1,
+            "medio": 2,
+            "alto": 4,
+            "extraAlto": 7
+          },
+          "note": "Permisos, objetos compartidos y promocion entre esquemas."
+        },
+        {
+          "name": "Interfaces ETL, colas o procesos almacenados",
+          "days": {
+            "bajo": 3,
+            "medio": 7,
+            "alto": 13,
+            "extraAlto": 22
+          },
+          "note": "Carga, integracion, transformacion, reintentos y conciliacion."
+        }
+      ]
+    }
+  ]
+}
