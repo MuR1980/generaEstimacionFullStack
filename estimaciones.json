@@ -217,84 +217,64 @@
       "description": "Oracle Application Integration Architecture",
       "artifacts": [
         {
-          "name": "ABCS requester o provider",
-          "days": {
-            "bajo": 4,
-            "medio": 8,
-            "alto": 16,
-            "extraAlto": 25
-          },
-          "note": "Artefacto central; suele tocar contrato, transformacion, fault policy y composite."
-        },
-        {
-          "name": "EBS, EBO y EBM canonicos",
+          "name": "Procesos BPEL AIA",
           "days": {
             "bajo": 3,
             "medio": 7,
             "alto": 14,
+            "extraAlto": 24
+          },
+          "note": "Procesos BPEL dentro de AIA, con orquestacion, fault handling y pruebas de flujo."
+        },
+        {
+          "name": "Composites SOA AIA",
+          "days": {
+            "bajo": 3,
+            "medio": 7,
+            "alto": 13,
             "extraAlto": 22
           },
-          "note": "Impacta modelo canonico, extensiones y compatibilidad de mensajes."
+          "note": "Composites SOA AIA, wiring, mediator, dependencias y configuracion de servicio."
         },
         {
-          "name": "Transformaciones XSLT AIA",
-          "days": {
-            "bajo": 2,
-            "medio": 5,
-            "alto": 10,
-            "extraAlto": 18
-          },
-          "note": "Aumenta con normalizacion, estructuras repetitivas y validacion de dominios."
-        },
-        {
-          "name": "DVM y XREF",
-          "days": {
-            "bajo": 1,
-            "medio": 3,
-            "alto": 5,
-            "extraAlto": 8
-          },
-          "note": "Tablas de equivalencia y referencias cruzadas entre aplicaciones."
-        },
-        {
-          "name": "Extension o ajuste de PIP",
-          "days": {
-            "bajo": 5,
-            "medio": 10,
-            "alto": 20,
-            "extraAlto": 35
-          },
-          "note": "Requiere entender flujo preconstruido, puntos de extension y regresion completa."
-        },
-        {
-          "name": "AIA error handling y fault policies",
-          "days": {
-            "bajo": 2,
-            "medio": 5,
-            "alto": 9,
-            "extraAlto": 14
-          },
-          "note": "Incluye notificaciones, recuperacion y trazas operativas."
-        },
-        {
-          "name": "Routing, mediator y composite wires",
-          "days": {
-            "bajo": 2,
-            "medio": 5,
-            "alto": 10,
-            "extraAlto": 16
-          },
-          "note": "La complejidad aumenta con multiples consumidores o reglas por canal."
-        },
-        {
-          "name": "Deployment plan y configuracion AIA",
+          "name": "Contratos WSDL AIA",
           "days": {
             "bajo": 1,
             "medio": 3,
             "alto": 6,
             "extraAlto": 10
           },
-          "note": "Propiedades, endpoints, plan de promocion y validacion postdeploy."
+          "note": "Definicion y ajuste de contratos WSDL, compatibilidad y versionado."
+        },
+        {
+          "name": "Esquemas XSD (Metadata Service de AIA)",
+          "days": {
+            "bajo": 2,
+            "medio": 4,
+            "alto": 8,
+            "extraAlto": 14
+          },
+          "note": "Esquemas XSD del Metadata Service de AIA, extensiones y validaciones."
+        },
+        {
+          "name": "Transformaciones XSL adicionales",
+          "days": {
+            "bajo": 2,
+            "medio": 5,
+            "alto": 10,
+            "extraAlto": 16
+          },
+          "note": "Transformaciones XSL adicionales, normalizacion de payloads y reglas de mapeo."
+        },
+        {
+          "name": "Adaptadores JCA y configuracion",
+          "days": {
+            "bajo": 2,
+            "medio": 5,
+            "alto": 9,
+            "extraAlto": 15
+          },
+          "note": "Adaptadores JCA, propiedades de conexion, endpoints y configuracion por ambiente."
         }
       ]
     },
@@ -486,84 +466,54 @@
       "description": "Oracle Communications Unified Inventory Management",
       "artifacts": [
         {
-          "name": "Specifications y modelo de entidades",
-          "days": {
-            "bajo": 3,
-            "medio": 7,
-            "alto": 14,
-            "extraAlto": 22
-          },
-          "note": "Modelado de servicios, recursos, relaciones y datos obligatorios."
-        },
-        {
-          "name": "Cartridge model y metadata",
+          "name": "Specifications, modelo de entidades y servicios",
           "days": {
             "bajo": 3,
             "medio": 6,
-            "alto": 12,
+            "alto": 10,
             "extraAlto": 20
           },
-          "note": "Empaquetado, versionado y dependencias entre especificaciones."
+          "note": "Modelado de servicios, entidades, recursos, relaciones y datos obligatorios."
         },
         {
-          "name": "Rulesets, validaciones y extension points",
+          "name": "Rulesets, validaciones/codigos java y extension points",
           "days": {
             "bajo": 3,
-            "medio": 7,
-            "alto": 14,
-            "extraAlto": 24
+            "medio": 6,
+            "alto": 15,
+            "extraAlto": 30
           },
-          "note": "Logica custom de inventario con pruebas de ciclo de vida."
+          "note": "Logica custom de inventario, validaciones Java y puntos de extension."
         },
         {
           "name": "Web services, APIs e integracion",
           "days": {
             "bajo": 3,
-            "medio": 7,
-            "alto": 13,
-            "extraAlto": 22
+            "medio": 5,
+            "alto": 15,
+            "extraAlto": 25
           },
           "note": "Incluye contratos, seguridad, transformacion y escenarios de error."
         },
         {
-          "name": "Caracteristicas y relaciones",
-          "days": {
-            "bajo": 2,
-            "medio": 4,
-            "alto": 8,
-            "extraAlto": 14
-          },
-          "note": "Cambios de atributos, cardinalidad y dependencia entre recursos."
-        },
-        {
-          "name": "Lifecycle, estados y transiciones",
-          "days": {
-            "bajo": 2,
-            "medio": 5,
-            "alto": 9,
-            "extraAlto": 15
-          },
-          "note": "Reglas de inventario por estado, reserva, asignacion y desconexion."
-        },
-        {
           "name": "Scripts DB y seed data",
           "days": {
-            "bajo": 2,
-            "medio": 4,
-            "alto": 8,
-            "extraAlto": 14
+            "bajo": 3,
+            "medio": 7,
+            "alto": 14,
+            "extraAlto": 21
           },
           "note": "Carga inicial, correcciones y datos maestros del inventario."
         },
         {
-          "name": "Pantallas y configuracion UI",
+          "name": "Configuracion UI/SSH",
           "days": {
             "bajo": 2,
             "medio": 4,
-            "alto": 8,
-            "extraAlto": 13
+            "alto": 7,
+            "extraAlto": 10
           },
-          "note": "Ajustes de visibilidad, busqueda y captura operacional."
+          "note": "Ajustes de configuracion UI, SSH, visibilidad, busqueda y captura operacional."
         }
       ]
     },
@@ -572,82 +522,82 @@
       "description": "Oracle Communications Order and Service Management",
       "artifacts": [
         {
-          "name": "Order cartridge y process model",
-          "days": {
-            "bajo": 4,
-            "medio": 9,
-            "alto": 18,
-            "extraAlto": 30
-          },
-          "note": "Corazon del flujo de orden; requiere pruebas por escenarios de orquestacion."
-        },
-        {
-          "name": "Tasks, lifecycle y estados de orden",
-          "days": {
-            "bajo": 3,
-            "medio": 7,
-            "alto": 13,
-            "extraAlto": 22
-          },
-          "note": "Incluye tareas manuales/automaticas, transiciones y condiciones."
-        },
-        {
-          "name": "Orchestration plan y dependencias",
-          "days": {
-            "bajo": 4,
-            "medio": 8,
-            "alto": 16,
-            "extraAlto": 28
-          },
-          "note": "Secuencia de fulfillment, dependencias entre servicios y rollback."
-        },
-        {
-          "name": "Automation plug-in, XQuery y XSLT",
-          "days": {
-            "bajo": 3,
-            "medio": 7,
-            "alto": 14,
-            "extraAlto": 24
-          },
-          "note": "Logica de automatizacion, transformacion y comunicacion con sistemas externos."
-        },
-        {
           "name": "Data dictionary y order template",
           "days": {
-            "bajo": 2,
-            "medio": 5,
-            "alto": 9,
-            "extraAlto": 15
+            "bajo": 1,
+            "medio": 3,
+            "alto": 5,
+            "extraAlto": 7
           },
-          "note": "Estructura de datos de orden, validaciones y plantillas."
+          "note": "Estructura base de datos de orden, validaciones y plantillas."
         },
         {
-          "name": "Web services, JMS e interfaces",
-          "days": {
-            "bajo": 3,
-            "medio": 7,
-            "alto": 13,
-            "extraAlto": 22
-          },
-          "note": "Entrada/salida de ordenes, eventos, colas y contratos."
-        },
-        {
-          "name": "Fallout, jeopardy y manejo de errores",
+          "name": "Productos",
           "days": {
             "bajo": 2,
             "medio": 5,
             "alto": 10,
-            "extraAlto": 16
+            "extraAlto": 15
           },
-          "note": "Alertas, recuperacion, reintentos y operacion de ordenes fallidas."
+          "note": "Definicion y ajuste de productos dentro del modelo de orden."
+        },
+        {
+          "name": "Servicios CFS/RFS",
+          "days": {
+            "bajo": 2,
+            "medio": 5,
+            "alto": 10,
+            "extraAlto": 15
+          },
+          "note": "Modelado de servicios cliente y recursos, con dependencias de fulfillment."
+        },
+        {
+          "name": "Mapping Rules",
+          "days": {
+            "bajo": 1,
+            "medio": 3,
+            "alto": 5,
+            "extraAlto": 7
+          },
+          "note": "Reglas de mapeo entre productos, servicios y datos de la orden."
+        },
+        {
+          "name": "Dominios",
+          "days": {
+            "bajo": 1,
+            "medio": 3,
+            "alto": 5,
+            "extraAlto": 7
+          },
+          "note": "Configuracion de dominios, valores permitidos y catalogos asociados."
+        },
+        {
+          "name": "Automation plug-in, XQuery y XSLT",
+          "days": {
+            "bajo": 5,
+            "medio": 10,
+            "alto": 15,
+            "extraAlto": 25
+          },
+          "note": "Logica de automatizacion, transformaciones y comunicacion con sistemas externos."
+        },
+        {
+          "name": "Acciones Tecnicas",
+          "days": {
+            "bajo": 3,
+            "medio": 7,
+            "alto": 15,
+            "extraAlto": 20
+          },
+          "note": "Acciones tecnicas de ejecucion, integracion y control del proceso de orden."
         },
         {
           "name": "Build, deploy cartridge y config de ambiente",
           "days": {
             "bajo": 1,
-            "medio": 3,
-            "alto": 6,
-            "extraAlto": 10
+            "medio": 2,
+            "alto": 3,
+            "extraAlto": 3
           },
           "note": "Empaquetado, versionado, despliegue y smoke tests."
         }
